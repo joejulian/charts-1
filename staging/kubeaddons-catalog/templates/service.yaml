@@ -4,7 +4,7 @@ metadata:
   name: {{ include "kubeaddons-catalog.fullname" . }}
   namespace: {{ .Release.Namespace }}
   labels:
-{{ include "kubeaddons-catalog.labels" . | indent 4 }}
+  {{ include "kubeaddons-catalog.labels" . | indent 4 }}
 spec:
   ports:
   - port: {{ .Values.service.port }}

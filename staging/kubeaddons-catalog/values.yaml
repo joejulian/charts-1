@@ -9,6 +9,10 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
+ingress:
+  enable: true
+  path: /catalog
+
 service:
   type: ClusterIP
   port: 80
