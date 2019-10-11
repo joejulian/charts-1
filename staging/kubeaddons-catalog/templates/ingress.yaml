@@ -8,10 +8,11 @@ metadata:
 {{ include "kubeaddons-catalog.labels" . | indent 4 }}
 spec:
   rules:
-    - http:
-        paths:
-          - path: {{ .Values.ingress.path }}
-            backend:
-              serviceName: {{ include "kubeaddons-catalog.fullname" . }}
-              servicePort: {{ .Values.service.port }}
+  - host: {{ .Values.ingress.hostName }}
+    http:
+      paths:
+        - path: {{ .Values.ingress.path }}
+          backend:
+            serviceName: {{ include "kubeaddons-catalog.fullname" . }}
+            servicePort: {{ .Values.service.port }}
 {{- end }}
