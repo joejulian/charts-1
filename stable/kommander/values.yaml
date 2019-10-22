@@ -82,3 +82,7 @@ kommander-cluster-lifecycle:
       name:
       kind: Issuer
       selfSigned: false
+
+kommander-thanos:
+  enabled: true
+  thanosAddress: "prometheus-kubeaddons-prom-prometheus.kubeaddons.svc.cluster.local:10901"
